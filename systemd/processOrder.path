@@ -1,0 +1,9 @@
+[Unit]
+Description="Monitor topc-2022 incoming orders"
+
+[Path]
+DirectoryNotEmpty=/var/lib/thephpcc/live/topc-2022/orders/incoming
+Unit=processOrder.service
+
+[Install]
+WantedBy=multi-user.target

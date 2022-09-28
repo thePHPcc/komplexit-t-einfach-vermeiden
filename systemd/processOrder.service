@@ -1,0 +1,11 @@
+[Unit]
+Description="Process Incoming TOPC-2022 orders"
+
+[Service]
+Type=simple
+Environment=TOPC_INCOMING=/var/lib/thephpcc/live/topc-2022/orders/incoming
+Environment=TOPC_ARCHIVE=/var/lib/thephpcc/live/topc-2022/orders/archive
+ExecStart=/webspace/topc-2022/___ACTIVE___/backend/processOrders.php
+
+[Install]
+WantedBy=multi-user.target
